@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f2e8">
+  <meta name="description" content="A curated corner of the internet for a mind that wants more.">
+  <title>The Attention Edit — Choose what deserves your attention</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement"><span class="sparkle">✳</span> a little less scrolling, a little more living <span class="announcement-dot">✳</span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="The Attention Edit home">the attention edit<span>.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active" data-nav="home">Home</a>
+      <a href="#the-edit" class="nav-link" data-nav="the-edit">The edit</a>
+      <a href="#saved" class="nav-link" data-nav="saved">Your shortlist <span class="saved-count" id="savedCount">0</span></a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A CURATED CORNER OF THE INTERNET</p>
+        <h1>You are what<br>you <span class="headline-mark">consume.</span></h1>
+        <p class="hero-subtitle">Your attention is a little too precious for the algorithm to decide everything. Find ideas, stories and rabbit holes that actually give something back.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#the-edit">Find your next good rabbit hole <span>↗</span></a>
+          <a class="text-link" href="#about">What's the point? <span>↓</span></a>
+        </div>
+        <div class="hero-note"><span class="note-star">✳</span><span>Curiosity looks good on you.</span></div>
+      </div>
+      <div class="hero-art reveal" aria-label="Illustration of a person choosing what to read">
+        <div class="art-sun"></div>
+        <div class="art-label label-top">FEED YOUR CURIOSITY</div>
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <svg class="hero-illustration" viewBox="0 0 520 470" role="img" aria-labelledby="heroSvgTitle">
+          <title id="heroSvgTitle">A person surrounded by books, ideas, a phone and plants</title>
+          <path d="M61 354 C48 268 94 181 175 155 C253 130 315 166 353 224 C392 283 379 353 340 396 L92 396Z" fill="#dce3d3"/>
+          <path d="M123 357 C107 318 128 268 164 253 C200 237 233 255 245 290 L249 396 L137 396Z" fill="#c87961"/>
+          <path d="M250 396 C259 341 300 299 348 306 C383 311 406 347 405 396Z" fill="#34483b"/>
+          <!-- plant -->
+          <path d="M92 346 L92 259 M92 294 C54 287 51 260 58 242 C84 247 100 268 92 294 M94 320 C126 307 140 284 133 265 C108 270 92 291 94 320" stroke="#34483b" stroke-width="5" fill="#9aa77b" stroke-linecap="round"/>
+          <path d="M69 345 L116 345 L109 390 L76 390Z" fill="#d8bd78"/>
+          <!-- head and hair -->
+          <path d="M198 180 C182 142 199 103 237 94 C279 84 309 110 307 148 L296 199 L218 205Z" fill="#34483b"/>
+          <ellipse cx="253" cy="159" rx="48" ry="57" fill="#b87558"/>
+          <path d="M207 151 C207 113 229 95 260 99 C289 102 305 122 302 151 C282 133 267 128 250 130 C235 145 222 151 207 151Z" fill="#34483b"/>
+          <path d="M234 165 Q241 169 246 165 M267 165 Q274 169 280 164" stroke="#34483b" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M251 183 Q263 191 275 181" stroke="#7b4637" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- body -->
+          <path d="M212 215 C225 203 282 202 299 219 L328 313 L292 349 L211 324 L184 263Z" fill="#d8bd78"/>
+          <path d="M217 220 C194 236 174 260 165 289 L195 303 L228 262Z" fill="#b87558"/>
+          <path d="M294 227 C322 239 340 260 346 284 L322 296 L292 264Z" fill="#b87558"/>
+          <!-- open book -->
+          <path d="M170 285 Q214 268 251 293 L251 341 Q209 318 170 339Z" fill="#f7f2e8" stroke="#34483b" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M251 293 Q288 269 326 285 L326 339 Q285 318 251 341Z" fill="#fffaf0" stroke="#34483b" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M187 302 Q212 294 234 307 M187 313 Q210 305 234 318 M270 304 Q291 293 311 300 M270 315 Q292 304 311 311" stroke="#9aa77b" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- floating phone -->
+          <g transform="rotate(12 385 190)">
+            <rect x="355" y="142" width="61" height="103" rx="12" fill="#34483b"/>
+            <rect x="361" y="151" width="49" height="83" rx="7" fill="#f7f2e8"/>
+            <circle cx="385" cy="240" r="2.5" fill="#d8bd78"/>
+            <path d="M372 169 L399 169 M372 180 L394 180" stroke="#9aa77b" stroke-width="4" stroke-linecap="round"/>
+            <rect x="372" y="191" width="27" height="24" rx="5" fill="#dce3d3"/>
+          </g>
+          <!-- stars and idea bubbles -->
+          <path d="M355 89 L362 107 L381 114 L362 121 L355 140 L348 121 L329 114 L348 107Z" fill="#d8bd78"/>
+          <path d="M130 139 L135 151 L148 156 L135 161 L130 174 L125 161 L112 156 L125 151Z" fill="#c87961"/>
+          <circle cx="413" cy="302" r="10" fill="#c87961"/>
+          <circle cx="133" cy="213" r="6" fill="#d8bd78"/>
+          <path d="M392 352 q13 -16 25 0 q-12 14 -25 0Z" fill="#9aa77b"/>
+          <path d="M410 352 q13 -16 25 0 q-12 14 -25 0Z" fill="#9aa77b"/>
+          <path d="M401 351 L401 373" stroke="#34483b" stroke-width="3" stroke-linecap="round"/>
+          <!-- ground -->
+          <path d="M73 397 Q230 382 425 398" stroke="#34483b" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="art-label label-bottom">LESS NOISE. MORE NOURISHMENT.</div>
+        <div class="art-sticker">stay<br>curious <span>✳</span></div>
+      </div>
+      <div class="hero-bottomline"><span>SCROLL WITH INTENTION</span><span class="bottomline-center">✳</span><span>STAY A LITTLE CURIOUS</span></div>
+    </section>
+
+    <section class="intro-strip section-wrap reveal" id="about">
+      <div class="intro-mark">“</div>
+      <div class="intro-copy">
+        <p class="eyebrow">A SMALL INTERNET MANIFESTO</p>
+        <h2>Not everything deserves<br> a place in your head.</h2>
+      </div>
+      <p class="intro-text">The Attention Edit is a handpicked starting point for what to read, watch, hear and explore next. No infinite feed. Just good stuff, organised by the kind of curiosity you're in the mood for.</p>
+    </section>
+
+    <section class="edit-section" id="the-edit">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> YOUR INTERNET, RE-EDITED</p>
+            <h2>Pick a <span class="headline-mark">rabbit hole.</span></h2>
+          </div>
+          <p class="section-aside">Six little corners.<br>Infinite things to learn.</p>
+        </div>
+        <div class="category-grid" id="categoryGrid">
+          <button class="category-card cat-news reveal" data-category="news">
+            <span class="cat-index">01 / THE WORLD</span>
+            <span class="cat-illustration news-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120"><circle cx="115" cy="34" r="22" fill="#d8bd78"/><path d="M29 28 L97 28 L97 89 L29 89Z" fill="#fffaf0" stroke="#34483b" stroke-width="2.5"/><path d="M40 40 L85 40 M40 50 L85 50 M40 60 L75 60" stroke="#9aa77b" stroke-width="4" stroke-linecap="round"/><path d="M47 78 L47 69 L58 69 L58 78 M64 78 L64 65 L75 65 L75 78 M81 78 L81 72 L88 72 L88 78" fill="#c87961"/><path d="M111 52 C125 46 137 56 135 69 C134 83 122 90 111 82 C101 75 101 61 111 52Z" fill="#9aa77b"/><path d="M110 54 L119 63 L129 57 M119 63 L115 78" stroke="#34483b" stroke-width="2" fill="none"/></svg>
+            </span>
+            <span class="cat-title">daily debrief <span>↗</span></span>
+            <span class="cat-description">The world, minus the noise.</span>
+          </button>
+          <button class="category-card cat-tech reveal" data-category="tech">
+            <span class="cat-index">02 / THE FUTURE</span>
+            <span class="cat-illustration tech-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120"><rect x="28" y="24" width="83" height="59" rx="7" fill="#34483b"/><rect x="35" y="31" width="69" height="44" rx="3" fill="#f7f2e8"/><path d="M44 43 L57 43 M44 51 L72 51 M44 59 L64 59" stroke="#9aa77b" stroke-width="4" stroke-linecap="round"/><path d="M19 87 L119 87 L109 96 L29 96Z" fill="#c87961"/><path d="M122 20 L128 36 L144 42 L128 48 L122 64 L116 48 L100 42 L116 36Z" fill="#d8bd78"/><circle cx="124" cy="83" r="12" fill="#9aa77b"/><path d="M124 75 L124 91 M116 83 L132 83" stroke="#34483b" stroke-width="2.5"/></svg>
+            </span>
+            <span class="cat-title">tech stuff <span>♡</span></span>
+            <span class="cat-description">Curiosity, with a charging cable.</span>
+          </button>
+          <button class="category-card cat-money reveal" data-category="money">
+            <span class="cat-index">03 / THE BAG</span>
+            <span class="cat-illustration money-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120"><path d="M35 43 Q35 35 44 35 L110 35 Q119 35 119 43 L125 91 Q126 98 117 98 L37 98 Q29 98 30 90Z" fill="#d8bd78" stroke="#34483b" stroke-width="2.5"/><path d="M54 37 C54 14 99 14 99 37" stroke="#34483b" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="79" cy="66" r="18" fill="#f7f2e8" stroke="#34483b" stroke-width="2.5"/><path d="M85 56 C76 50 68 60 77 65 C87 69 83 79 73 74 M79 52 L79 79" stroke="#34483b" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M124 24 L129 37 L142 42 L129 47 L124 60 L119 47 L106 42 L119 37Z" fill="#c87961"/></svg>
+            </span>
+            <span class="cat-title">MONEYYYY <span>↗</span></span>
+            <span class="cat-description">Make money make a little more sense.</span>
+          </button>
+          <button class="category-card cat-escape reveal" data-category="escape">
+            <span class="cat-index">04 / THE FEELS</span>
+            <span class="cat-illustration escape-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120"><path d="M47 80 C24 65 28 38 49 35 C65 33 75 47 80 55 C85 47 96 33 112 35 C133 38 136 65 113 80 L80 105Z" fill="#c87961"/><path d="M42 25 L48 38 L62 43 L48 48 L42 62 L36 48 L22 43 L36 38Z" fill="#d8bd78"/><path d="M116 18 L121 30 L134 35 L121 40 L116 53 L111 40 L98 35 L111 30Z" fill="#9aa77b"/><path d="M70 18 Q80 8 90 18 Q80 26 70 18Z" fill="#34483b"/><path d="M80 18 L80 35" stroke="#34483b" stroke-width="2"/></svg>
+            </span>
+            <span class="cat-title">escapism <small>(ft RAYE)</small> <span>↗</span></span>
+            <span class="cat-description">For when reality needs a soundtrack.</span>
+          </button>
+          <button class="category-card cat-think reveal" data-category="think">
+            <span class="cat-index">05 / THE MIND</span>
+            <span class="cat-illustration think-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120"><path d="M44 97 L118 97 L108 110 L53 110Z" fill="#c87961"/><path d="M57 96 L60 67 L101 67 L105 96Z" fill="#f7f2e8" stroke="#34483b" stroke-width="2.5"/><ellipse cx="81" cy="40" rx="28" ry="31" fill="#d8bd78" stroke="#34483b" stroke-width="2.5"/><path d="M54 37 Q52 8 82 10 Q110 10 108 38 L101 29 L91 23 L78 27 L65 22Z" fill="#34483b"/><path d="M69 41 L75 41 M88 41 L94 41 M76 54 Q82 59 88 54" stroke="#34483b" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M121 17 L126 29 L139 34 L126 39 L121 52 L116 39 L103 34 L116 29Z" fill="#9aa77b"/></svg>
+            </span>
+            <span class="cat-title">ur brain needs a lil Socrates <span>✳</span></span>
+            <span class="cat-description">Questions with excellent aftercare.</span>
+          </button>
+          <button class="category-card cat-mood reveal" data-category="mood">
+            <span class="cat-index">06 / THE EYE</span>
+            <span class="cat-illustration mood-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120"><rect x="27" y="23" width="44" height="62" rx="2" fill="#fffaf0" stroke="#34483b" stroke-width="2.5"/><path d="M34 32 L63 32 M34 39 L58 39" stroke="#c87961" stroke-width="3" stroke-linecap="round"/><path d="M35 71 C39 54 53 52 62 70Z" fill="#9aa77b"/><path d="M94 25 L125 25 L125 91 L94 91Z" fill="#d8bd78" stroke="#34483b" stroke-width="2.5"/><path d="M109 27 L109 90" stroke="#34483b" stroke-width="2"/><path d="M80 60 C80 47 90 43 90 33 C102 43 103 56 94 64 C86 71 81 68 80 60Z" fill="#c87961"/><path d="M84 71 L84 93" stroke="#34483b" stroke-width="2.5"/><circle cx="82" cy="20" r="7" fill="#9aa77b"/></svg>
+            </span>
+            <span class="cat-title">MooooodBOarddd <span>↗</span></span>
+            <span class="cat-description">A little inspiration for your eyeballs.</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommendations section-wrap" id="recommendations">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> THE GOOD STUFF</p>
+          <h2 id="recommendationTitle">A little bit of <span class="headline-mark">everything.</span></h2>
+        </div>
+        <p class="section-aside" id="recommendationSubtitle">Curated for curious minds.<br>Picked with intention.</p>
+      </div>
+      <div class="content-toolbar reveal">
+        <div class="filter-pills" id="filterPills" aria-label="Filter content by category">
+          <button class="filter-pill active" data-filter="all">Everything</button>
+          <button class="filter-pill" data-filter="news">daily debrief</button>
+          <button class="filter-pill" data-filter="tech">tech stuff ♡</button>
+          <button class="filter-pill" data-filter="money">MONEYYYY</button>
+          <button class="filter-pill" data-filter="escape">escapism</button>
+          <button class="filter-pill" data-filter="think">Socrates</button>
+          <button class="filter-pill" data-filter="mood">MooooodBOarddd</button>
+        </div>
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Find a little something…" aria-label="Search curated content"></label>
+      </div>
+      <div class="content-grid" id="contentGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <span>✳</span><h3>Nothing in this little corner yet.</h3><p>Try another search or category.</p>
+      </div>
+      <div class="curation-note"><span>✳</span> A good starting point, not the final word. Follow the sources, stay curious, make up your own mind.</div>
+    </section>
+
+    <section class="saved-section" id="saved">
+      <div class="section-wrap saved-inner">
+        <div class="saved-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> YOUR LITTLE COLLECTION</p>
+          <h2>For later,<br><span class="headline-mark">not never.</span></h2>
+          <p>Save the good stuff here. Your shortlist stays on this device, so you can come back when you have the time and headspace.</p>
+        </div>
+        <div class="saved-panel">
+          <div class="saved-panel-head"><span>YOUR SHORTLIST</span><span id="savedPanelCount">00 ITEMS</span></div>
+          <div id="savedGrid" class="saved-grid"></div>
+          <div id="savedEmpty" class="saved-empty"><span>♡</span><p>Your shortlist is looking a little empty.</p><small>Tap the bookmark on anything that catches your eye.</small></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <a class="brand footer-brand" href="#home">the attention edit<span>.</span></a>
+    <p>Made for a mind that wants more.</p>
+    <a class="back-top" href="#home">Back to the top ↑</a>
+    <div class="footer-bottom"><span>CHOOSE WHAT DESERVES YOUR ATTENTION.</span><span>✳</span><span>NO INFINITE FEED HERE.</span></div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
